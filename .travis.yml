@@ -36,14 +36,14 @@ before_install:
   # PX4 toolchain
   - compiler="gcc-arm-none-eabi-4_9-2015q3"
   - if [ ! -d "$HOME/opt/$compiler" ]; then
-      wget http://firmware.diydrones.com/Tools/PX4-tools/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
+      wget https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q3-update/+download/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
       && tar -xf gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
       ;
     fi
   # RPi toolchain
   - compiler="tools-master/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64"
   - if [ ! -d "$HOME/opt/$compiler" ]; then
-      wget http://firmware.diydrones.com/Tools/Travis/NavIO/master.tar.gz
+      wget https://github.com/emlid/Navio/archive/master.tar.gz
       && tar -xf master.tar.gz
       ;
     fi
